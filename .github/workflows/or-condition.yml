@@ -1,0 +1,10 @@
+name: Or Condition Demo
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Goku or Himanshuyadav1
+        if: github.actor == 'Goku' || github.actor == 'Himanshuyadav1'
+        run: echo "It is triggered by either Goku or Himanshuyadav1"
+        
